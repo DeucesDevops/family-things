@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#0e5138",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#213528",
+                    "on-tertiary-container": "#ffd29d",
+                    "surface-tint": "#2c694e",
+                    "surface-container-highest": "#d0e8d6",
+                    "surface": "#e9ffed",
+                    "secondary": "#9d4223",
+                    "inverse-on-surface": "#dff7e4",
+                    "tertiary-fixed": "#ffddb6",
+                    "surface-container-low": "#e1fae7",
+                    "outline": "#707973",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#fe8c66",
+                    "background": "#e9ffed",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#e9ffed",
+                    "secondary-fixed": "#ffdbd0",
+                    "on-primary-fixed": "#002114",
+                    "on-primary-container": "#a8e7c5",
+                    "on-surface-variant": "#404943",
+                    "on-surface": "#0b1f14",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#d6eedc",
+                    "on-tertiary-fixed": "#2a1800",
+                    "primary-container": "#2d6a4f",
+                    "on-secondary-fixed": "#390b00",
+                    "surface-container": "#dcf4e1",
+                    "surface-variant": "#d0e8d6",
+                    "tertiary": "#653f00",
+                    "outline-variant": "#bfc9c1",
+                    "primary-fixed-dim": "#95d4b3",
+                    "surface-dim": "#c8e0ce",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#0b1f14",
+                    "inverse-primary": "#95d4b3",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#ffb59d",
+                    "primary": "#0f5238",
+                    "tertiary-fixed-dim": "#ffb95a",
+                    "on-secondary-fixed-variant": "#7e2b0d",
+                    "tertiary-container": "#855500",
+                    "primary-fixed": "#b1f0ce",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#643f00",
+                    "on-secondary-container": "#742406"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Newsreader', serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col items-center">
+<!-- TopAppBar -->
+<header class="bg-[#e9ffed]/80 dark:bg-emerald-950/80 backdrop-blur-xl docked full-width top-0 sticky z-40 shadow-sm dark:shadow-none w-full h-16 flex justify-between items-center px-6">
+<button class="text-emerald-900 dark:text-emerald-50 hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="text-lg font-serif italic tracking-tight text-emerald-900 dark:text-emerald-50">New Family Memory</h1>
+<span class="text-emerald-700/60 font-sans uppercase tracking-widest text-[10px] font-bold">Step 1 of 4</span>
+</header>
+<main class="max-w-xl w-full px-6 py-12 flex flex-col flex-1">
+<!-- Step Indicator -->
+<div class="flex justify-center gap-3 mb-10">
+<div class="w-2.5 h-2.5 rounded-full bg-primary"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-surface-container-high"></div>
+</div>
+<!-- Section Title -->
+<div class="mb-12 text-center">
+<h2 class="text-4xl font-headline italic mb-3">What are we doing?</h2>
+<p class="text-on-surface-variant font-body text-sm tracking-wide">Choose the theme of your next family adventure.</p>
+</div>
+<!-- Bento Grid Selection -->
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-24">
+<!-- Selected Card: Eat-out -->
+<button class="relative aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-lowest rounded-xl ring-2 ring-primary ring-offset-4 ring-offset-surface hover:brightness-110 transition-all active:scale-98">
+<span class="text-5xl mb-4 grayscale-0">🍽️</span>
+<span class="font-body font-bold text-sm text-primary uppercase tracking-wider">Eat-out</span>
+<div class="absolute top-3 right-3 bg-primary text-on-primary rounded-full p-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</button>
+<!-- Card: Holiday -->
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-xl hover:bg-surface-container-highest transition-all active:scale-98">
+<span class="text-5xl mb-4">🏖️</span>
+<span class="font-body font-semibold text-sm text-on-surface-variant uppercase tracking-wider">Holiday</span>
+</button>
+<!-- Card: Party -->
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-xl hover:bg-surface-container-highest transition-all active:scale-98">
+<span class="text-5xl mb-4">🎉</span>
+<span class="font-body font-semibold text-sm text-on-surface-variant uppercase tracking-wider">Party</span>
+</button>
+<!-- Card: Activity -->
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-xl hover:bg-surface-container-highest transition-all active:scale-98">
+<span class="text-5xl mb-4">🎯</span>
+<span class="font-body font-semibold text-sm text-on-surface-variant uppercase tracking-wider">Activity</span>
+</button>
+<!-- Card: Trip -->
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-xl hover:bg-surface-container-highest transition-all active:scale-98">
+<span class="text-5xl mb-4">✈️</span>
+<span class="font-body font-semibold text-sm text-on-surface-variant uppercase tracking-wider">Trip</span>
+</button>
+<!-- Card: Show -->
+<button class="aspect-square flex flex-col items-center justify-center p-6 bg-surface-container-low rounded-xl hover:bg-surface-container-highest transition-all active:scale-98">
+<span class="text-5xl mb-4">🎭</span>
+<span class="font-body font-semibold text-sm text-on-surface-variant uppercase tracking-wider">Show</span>
+</button>
+</div>
+<!-- Decorative Surface Image -->
+<div class="relative h-48 rounded-xl overflow-hidden mb-12 shadow-sm">
+<img alt="Warm family gathering around a wooden dining table with candlelight and soft evening glow" class="w-full h-full object-cover brightness-75" data-alt="Candid moment of a family sharing a meal around a rustic wooden table with soft candle lighting and warm amber tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi8jnafuw42b2kCb0RURAljw-dCyXrmqDmr9c_YzCU7ne6lcbCH88cSgrFM2cWMvQOU6GGRyUcL9wYepNkc8phXyBM6gDlR81ti-aiJ0WzveiZTcniQFhXRMbvbc820_1lB7bFhIzNlVaNe7P6shzSNxRqfBg47gzT84poJgc6YMdnNNrfOwJDwLzUIR1EgcfmeAEb9Xm4Lx_Fye7tRUvMiO14rqgTbvqajueBXQCsPT8zVVrklIDmu2GYF9mEU8i3gj_GPh2ypZ0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+<p class="text-white font-headline text-2xl italic">Creating space for connection.</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-10 pb-8 pt-4 bg-[#e9ffed]/90 dark:bg-emerald-950/90 backdrop-blur-2xl rounded-t-[3rem] shadow-[0_-20px_40px_rgba(11,31,20,0.06)]">
+<!-- Back Action -->
+<button class="flex flex-col items-center justify-center text-emerald-800 dark:text-emerald-200 px-8 py-3 hover:brightness-110 transition-all active:scale-98">
+<span class="material-symbols-outlined mb-1" data-icon="chevron_left">chevron_left</span>
+<span class="font-sans uppercase tracking-widest text-[10px] font-bold">Back</span>
+</button>
+<!-- Primary Action: Next -->
+<button class="flex flex-col items-center justify-center bg-gradient-to-r from-[#0f5238] to-[#2d6a4f] text-white rounded-full px-12 py-3 hover:brightness-110 transition-all active:scale-95 shadow-lg">
+<div class="flex items-center gap-2">
+<span class="font-sans uppercase tracking-widest text-[11px] font-bold">Next Step</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="chevron_right">chevron_right</span>
+</div>
+</button>
+</nav>
+</body></html>

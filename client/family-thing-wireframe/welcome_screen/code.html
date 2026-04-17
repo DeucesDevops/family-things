@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background": "#e9ffed",
+                        "on-secondary-container": "#742406",
+                        "surface-container-low": "#e1fae7",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#ffdbd0",
+                        "inverse-surface": "#213528",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#a8e7c5",
+                        "surface-container-high": "#d6eedc",
+                        "surface": "#e9ffed",
+                        "on-secondary-fixed": "#390b00",
+                        "secondary-container": "#fe8c66",
+                        "on-surface-variant": "#404943",
+                        "tertiary-fixed-dim": "#ffb95a",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#0b1f14",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#2d6a4f",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#dcf4e1",
+                        "surface-dim": "#c8e0ce",
+                        "tertiary-container": "#855500",
+                        "on-tertiary-container": "#ffd29d",
+                        "primary-fixed-dim": "#95d4b3",
+                        "on-primary-fixed": "#002114",
+                        "secondary": "#9d4223",
+                        "on-tertiary-fixed-variant": "#643f00",
+                        "outline": "#707973",
+                        "primary": "#0f5238",
+                        "inverse-primary": "#95d4b3",
+                        "primary-fixed": "#b1f0ce",
+                        "surface-tint": "#2c694e",
+                        "on-primary-fixed-variant": "#0e5138",
+                        "on-background": "#0b1f14",
+                        "tertiary-fixed": "#ffddb6",
+                        "inverse-on-surface": "#dff7e4",
+                        "tertiary": "#653f00",
+                        "surface-bright": "#e9ffed",
+                        "secondary-fixed-dim": "#ffb59d",
+                        "surface-variant": "#d0e8d6",
+                        "outline-variant": "#bfc9c1",
+                        "surface-container-highest": "#d0e8d6",
+                        "on-secondary-fixed-variant": "#7e2b0d",
+                        "on-tertiary-fixed": "#2a1800"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .serif-italic { font-family: 'Newsreader'; font-style: italic; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body min-h-screen flex flex-col overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-[#e9ffed]/80 backdrop-blur-lg flex justify-between items-center px-6 py-4 w-full fixed top-0 z-50">
+<div class="flex items-center gap-2">
+<span class="font-['Newsreader'] italic font-semibold text-[#0f5238]">Family Things</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#0f5238]/60 hover:opacity-80 transition-opacity font-label font-medium text-sm">Sign In</button>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden ring-2 ring-primary/10">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a smiling father in soft outdoor lighting, natural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjFFHdKEALjcX4kwb6zeVw6FJD484UXRAakm6pGYOUsx3oP70dn7mspnVVIxGvIrG4HXLTV8AcqYus6wxvKVKjVv4XAd4X4U6fusEDrUwD6TBBEWM6A4HLggL1i18XJKl1nYPU_6jQXP80J0qPK96kv6u-g6xnKnsxllQoa97OJSAXL2KpRGmzliXrLdY0bw5wV0s8H4CHpjLfuiApuPfOTrMt7CfZH5RjACEv6WXmyFxz6cLOOoDEth5B3BOH5NflzHQtevzL1wY"/>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col pt-24 pb-12 px-6 max-w-5xl mx-auto w-full">
+<!-- Hero Section -->
+<section class="relative mt-8 mb-12">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<!-- Content Side -->
+<div class="w-full md:w-1/2 space-y-8 order-2 md:order-1">
+<div class="space-y-4">
+<span class="text-secondary font-label font-bold tracking-widest text-xs uppercase">Welcome to the family</span>
+<h1 class="font-headline font-bold text-5xl md:text-7xl text-primary leading-[1.1] tracking-tight">
+                            Everything your family loves, in <span class="serif-italic font-medium">one place</span>.
+                        </h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-md leading-relaxed">
+                            Plan holidays, eat-outs, birthdays, and adventures together — effortlessly.
+                        </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+<button class="bg-gradient-to-br from-[#0f5238] to-[#2d6a4f] text-white px-10 py-4 rounded-full font-label font-bold text-lg shadow-lg hover:opacity-90 active:scale-95 transition-all duration-200">
+                            Get Started
+                        </button>
+<div class="flex items-center gap-2 px-4 py-2">
+<div class="flex gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary/20"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary/20"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary/20"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary/20"></span>
+</div>
+<span class="text-xs font-label text-on-surface-variant/60 ml-2">1 of 5</span>
+</div>
+</div>
+</div>
+<!-- Illustration/Image Side -->
+<div class="w-full md:w-1/2 order-1 md:order-2">
+<div class="relative group">
+<!-- Decorative background element -->
+<div class="absolute -top-6 -right-6 w-full h-full bg-surface-container-highest rounded-xl -rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
+<!-- Main image container -->
+<div class="relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl rotate-1 group-hover:rotate-0 transition-transform duration-500">
+<img alt="Family gathering" class="w-full h-full object-cover" data-alt="A warm, sun-drenched scene of a multigenerational family laughing together at a large wooden outdoor table during a summer garden party" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdDH0FXLLnhmfAJ7a-Gi1LagT-NKZoXNM6iwHZ74KdA0ebMLMdKhxsD1b_q9AsEJuEL6wT2NghIf9xQQzW2kqMtWzTqKiJvHPul82k9mPsNQzjFsWH0Z9Czkd5K6yw3tyAorW61zjQuXsSzB-zZIinBoWf4q9IzLB99dndvbqS4ezncfi9mrD1Mi16h1R1zcdWqDOI3pCl0bQoriTEgkkh8r6yD445uTZcfS84bb5BizzRcjo3D_54vhzWs8xIGSORjakQtk9B114"/>
+<!-- Overlapping editorial tag -->
+<div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-6 rounded-lg border-l-4 border-secondary shadow-xl">
+<span class="font-headline italic text-primary text-xl">"The best memories are the ones we plan together."</span>
+<p class="text-xs font-label text-secondary mt-2 uppercase tracking-widest font-bold">— The Miller Family</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Bento Grid (Briefly showcasing the 'Adventures') -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+<div class="bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between h-64 shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-4xl">flight_takeoff</span>
+<div>
+<h3 class="font-headline text-2xl text-primary mb-2">Holidays</h3>
+<p class="text-sm text-on-surface-variant">Shared itineraries and flight trackers for the whole crew.</p>
+</div>
+</div>
+<div class="bg-primary p-8 rounded-xl flex flex-col justify-between h-64 text-on-primary shadow-xl">
+<span class="material-symbols-outlined text-primary-fixed-dim text-4xl">restaurant</span>
+<div>
+<h3 class="font-headline text-2xl text-white mb-2">Eat-outs</h3>
+<p class="text-sm text-on-primary-container">Coordinate dietary needs and book tables instantly.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between h-64 shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-4xl">cake</span>
+<div>
+<h3 class="font-headline text-2xl text-primary mb-2">Birthdays</h3>
+<p class="text-sm text-on-surface-variant">Wishlists and party planning without the stress.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Hidden on Hero/Onboarding as per UX goal, but following JSON if top-level) -->
+<!-- Suppressed for focused Onboarding experience -->
+<!-- Secondary CTA / Footer area -->
+<footer class="mt-auto px-6 py-12 flex flex-col items-center text-center space-y-6">
+<div class="h-px w-24 bg-outline-variant/30"></div>
+<p class="text-on-surface-variant/60 text-xs font-label tracking-wide">
+            DESIGNED FOR FAMILIES WHO CHERISH EVERY MOMENT.<br/>
+            © 2024 FAMILY THINGS CO.
+        </p>
+</footer>
+</body></html>

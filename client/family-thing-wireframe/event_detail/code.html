@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#ffb95a",
+              "on-tertiary-container": "#ffd29d",
+              "surface-bright": "#e9ffed",
+              "on-secondary": "#ffffff",
+              "surface": "#e9ffed",
+              "on-primary": "#ffffff",
+              "outline": "#707973",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#0e5138",
+              "on-tertiary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#653f00",
+              "on-secondary-container": "#742406",
+              "surface-container-highest": "#d0e8d6",
+              "surface-container-low": "#e1fae7",
+              "secondary-fixed": "#ffdbd0",
+              "on-primary-fixed": "#002114",
+              "tertiary-fixed": "#ffddb6",
+              "background": "#e9ffed",
+              "tertiary-container": "#855500",
+              "surface-tint": "#2c694e",
+              "inverse-primary": "#95d4b3",
+              "on-surface-variant": "#404943",
+              "secondary": "#9d4223",
+              "surface-container-high": "#d6eedc",
+              "secondary-container": "#fe8c66",
+              "inverse-surface": "#213528",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed": "#2a1800",
+              "primary": "#0f5238",
+              "on-secondary-fixed-variant": "#7e2b0d",
+              "on-primary-container": "#a8e7c5",
+              "on-surface": "#0b1f14",
+              "inverse-on-surface": "#dff7e4",
+              "on-background": "#0b1f14",
+              "primary-fixed-dim": "#95d4b3",
+              "on-secondary-fixed": "#390b00",
+              "surface-container": "#dcf4e1",
+              "primary-container": "#2d6a4f",
+              "on-tertiary-fixed-variant": "#643f00",
+              "surface-variant": "#d0e8d6",
+              "error": "#ba1a1a",
+              "surface-dim": "#c8e0ce",
+              "primary-fixed": "#b1f0ce",
+              "outline-variant": "#bfc9c1",
+              "secondary-fixed-dim": "#ffb59d"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .serif-italic { font-family: 'Newsreader'; font-style: italic; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#e9ffed]/80 dark:bg-[#0b1f14]/80 backdrop-blur-lg">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<button class="w-10 h-10 flex items-center justify-center hover:opacity-80 transition-opacity scale-95 active:scale-90 transition-transform duration-200 text-[#0f5238] dark:text-[#e1fae7]">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-['Newsreader'] font-bold text-2xl tracking-tight text-[#0f5238] dark:text-[#e1fae7]">Family Things</h1>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a smiling woman with warm lighting and a soft natural green background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcuRdDJfW_eEyCzD4d9vhOWPP5T4Bn8NtX9I1dtUPMqSFMlZUzGdYEcRwlq7rkVyt8oj0zAGbUKvbTEJVecKdcGRygPBXCyCOFscO1wgnv_yAES5b-pHW0aPlfR1HSPEXIohI4E2Py0CSUHyw_rkEiabS2a5niQNjS4BVg3eKwmhNagO4sYJpiSBLIApqRH9vDhBF6fk3r-dSuMEICGn-Vj7YW6sHskdfKRQBwskiHunxD5FqHyWBId6syMLbMXLsWETa1XfbA-F4"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 max-w-2xl mx-auto px-6">
+<!-- Hero Section (Asymmetric Editorial Style) -->
+<section class="relative mb-12">
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+<img alt="Pizza Friday" class="w-full h-full object-cover scale-110" data-alt="Artisanal pepperoni pizza with fresh basil on a rustic wooden table with warm golden hour sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLpLWCm60a8oFrPhYZVbtN6rIDE3nmMBPJEq5ZpbXXZpTVwnee-hlaGQhp2h0WVBF7KG4KjUSYCk-y8KMJMGwi82N6YtKLXtKsiCzXAk3LHyokX8UX1c5XkWyk_eCWgmphDvV__OpWHPzU6RuoZPQ0q3xGWGkIMLNkWU6M-46i4PZEVBNtUje0UBmrvwTqU4kP3VbKSrcDwZxtpwqw5SISPVjxJ4qXU8kt4Biotg_6foHJrAgWY8GIpiSu7MEPxAHZZllv-m60a-A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary text-white text-xs font-label tracking-widest uppercase mb-4">Upcoming Event</span>
+<h2 class="font-headline text-5xl md:text-6xl text-white font-bold leading-tight tracking-tight">
+                        Pizza Friday at <br/><span class="serif-italic">Nando's</span> 🍕
+                    </h2>
+</div>
+</div>
+<!-- Floating Decorative Element -->
+<div class="absolute -top-4 -right-4 w-24 h-24 bg-tertiary-container rounded-full flex items-center justify-center rotate-12 shadow-xl border-4 border-surface">
+<span class="text-white font-headline italic font-bold text-lg">Weekly!</span>
+</div>
+</section>
+<!-- RSVP Interaction -->
+<section class="mb-16">
+<div class="flex flex-col gap-4">
+<div class="flex gap-3 h-16">
+<button class="flex-1 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-label font-bold flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-lg">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Going
+                    </button>
+<button class="flex-[0.6] bg-surface-container-high text-on-surface rounded-full font-label font-medium flex items-center justify-center hover:bg-surface-container-highest transition-colors">
+                        Maybe
+                    </button>
+<button class="flex-[0.4] bg-surface-container-low text-secondary rounded-full font-label font-medium flex items-center justify-center hover:bg-error-container transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Information Bento Grid -->
+<section class="space-y-10">
+<!-- Location Row -->
+<div class="flex items-start gap-6 group">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-highest flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-3xl">location_on</span>
+</div>
+<div class="flex-1 pt-1">
+<p class="text-secondary font-label text-sm font-semibold tracking-wide uppercase mb-1">Location</p>
+<h3 class="text-2xl font-headline font-bold text-on-surface">Westgate Mall</h3>
+<p class="text-on-surface-variant font-body">Mwanzi Road, Nairobi</p>
+<div class="mt-4 w-full h-32 rounded-lg overflow-hidden grayscale contrast-125 opacity-80 group-hover:grayscale-0 transition-all duration-500">
+<img alt="Map view" class="w-full h-full object-cover" data-alt="Clean minimal map view of a city street layout with soft pastel colors" data-location="Westgate Mall, Nairobi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnOa4L_tVw8wKQk9aj9D98sydjqP6iKEVgEIQdFxneEmg9nHSy-ZnxRyUHGlDiA4dpWJSn_oFiGWMxTOlUOPjOQVLFka2qbKlGoY09NanXVZWxaE7fu3UEAcW7IDdPNnqaEZ7J42SjVop6daJ0neuq1PAu2wCtTuj-z2ROpxqV7LnY3p9iq3YqjOTTQ40CR5RWYTn7eBdQY0yoXyws5zWlVflSvSZ-H8VaW5P1kvZjT5ugvHhovDZC48gi6geXh53xpvM5LIFWMYA"/>
+</div>
+</div>
+</div>
+<!-- Time Row -->
+<div class="flex items-start gap-6">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-highest flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-3xl">schedule</span>
+</div>
+<div class="flex-1 pt-1">
+<p class="text-secondary font-label text-sm font-semibold tracking-wide uppercase mb-1">Time</p>
+<h3 class="text-2xl font-headline font-bold text-on-surface">7:00 PM</h3>
+<p class="text-on-surface-variant font-body">Friday, October 27th</p>
+</div>
+</div>
+<!-- Notes Row -->
+<div class="flex items-start gap-6">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-highest flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-3xl">sticky_note_2</span>
+</div>
+<div class="flex-1 pt-1">
+<p class="text-secondary font-label text-sm font-semibold tracking-wide uppercase mb-1">Notes</p>
+<div class="p-6 rounded-3xl bg-surface-container-low border-l-4 border-tertiary shadow-sm">
+<p class="text-on-surface italic font-headline text-xl leading-relaxed">
+                            "Table is booked under <span class="font-bold text-primary">Bernard</span>. They only hold reservations for 15 minutes, so please try to be punctual!"
+                        </p>
+</div>
+</div>
+</div>
+<!-- Attending Section -->
+<div class="pt-8">
+<div class="flex justify-between items-end mb-6">
+<div>
+<p class="text-secondary font-label text-sm font-semibold tracking-wide uppercase mb-1">Guest List</p>
+<h3 class="text-3xl font-headline font-bold text-on-surface">Attending (5)</h3>
+</div>
+<button class="text-primary font-label font-bold text-sm hover:underline">View All</button>
+</div>
+<div class="flex -space-x-4">
+<div class="w-16 h-16 rounded-full border-4 border-surface bg-primary-container flex items-center justify-center text-white font-bold text-xl shadow-md z-10">B</div>
+<div class="w-16 h-16 rounded-full border-4 border-surface bg-secondary-container flex items-center justify-center text-white font-bold text-xl shadow-md z-20">A</div>
+<div class="w-16 h-16 rounded-full border-4 border-surface bg-tertiary-container flex items-center justify-center text-white font-bold text-xl shadow-md z-30">M</div>
+<div class="w-16 h-16 rounded-full border-4 border-surface bg-primary flex items-center justify-center text-white font-bold text-xl shadow-md z-40">K</div>
+<div class="w-16 h-16 rounded-full border-4 border-surface bg-outline flex items-center justify-center text-white font-bold text-xl shadow-md z-50">J</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-[#ffffff]/90 dark:bg-[#0b1f14]/90 backdrop-blur-xl shadow-[0_-10px_40px_rgba(11,31,20,0.04)] rounded-t-[3rem] pb-safe">
+<a class="flex flex-col items-center justify-center text-[#0f5238]/50 dark:text-[#e1fae7]/50 px-4 py-2 hover:text-[#9d4223] transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[11px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#0f5238] to-[#2d6a4f] text-white rounded-full px-6 py-2 Active: scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[11px]">Calendar</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#0f5238]/50 dark:text-[#e1fae7]/50 px-4 py-2 hover:text-[#9d4223] transition-colors" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[11px]">Add</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#0f5238]/50 dark:text-[#e1fae7]/50 px-4 py-2 hover:text-[#9d4223] transition-colors" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[11px]">Browse</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#0f5238]/50 dark:text-[#e1fae7]/50 px-4 py-2 hover:text-[#9d4223] transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[11px]">Profile</span>
+</a>
+</nav>
+</body></html>

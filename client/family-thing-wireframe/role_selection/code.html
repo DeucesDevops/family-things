@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#e9ffed",
+              "on-secondary-container": "#742406",
+              "surface-container-low": "#e1fae7",
+              "error-container": "#ffdad6",
+              "secondary-fixed": "#ffdbd0",
+              "inverse-surface": "#213528",
+              "on-error": "#ffffff",
+              "on-primary": "#ffffff",
+              "on-primary-container": "#a8e7c5",
+              "surface-container-high": "#d6eedc",
+              "surface": "#e9ffed",
+              "on-secondary-fixed": "#390b00",
+              "secondary-container": "#fe8c66",
+              "on-surface-variant": "#404943",
+              "tertiary-fixed-dim": "#ffb95a",
+              "on-secondary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "on-surface": "#0b1f14",
+              "surface-container-lowest": "#ffffff",
+              "primary-container": "#2d6a4f",
+              "error": "#ba1a1a",
+              "on-error-container": "#93000a",
+              "surface-container": "#dcf4e1",
+              "surface-dim": "#c8e0ce",
+              "tertiary-container": "#855500",
+              "on-tertiary-container": "#ffd29d",
+              "primary-fixed-dim": "#95d4b3",
+              "on-primary-fixed": "#002114",
+              "secondary": "#9d4223",
+              "on-tertiary-fixed-variant": "#643f00",
+              "outline": "#707973",
+              "primary": "#0f5238",
+              "inverse-primary": "#95d4b3",
+              "primary-fixed": "#b1f0ce",
+              "surface-tint": "#2c694e",
+              "on-primary-fixed-variant": "#0e5138",
+              "on-background": "#0b1f14",
+              "tertiary-fixed": "#ffddb6",
+              "inverse-on-surface": "#dff7e4",
+              "tertiary": "#653f00",
+              "surface-bright": "#e9ffed",
+              "secondary-fixed-dim": "#ffb59d",
+              "surface-variant": "#d0e8d6",
+              "outline-variant": "#bfc9c1",
+              "surface-container-highest": "#d0e8d6",
+              "on-secondary-fixed-variant": "#7e2b0d",
+              "on-tertiary-fixed": "#2a1800"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        backdrop-filter: blur(20px);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary/30">
+<!-- TopAppBar -->
+<header class="bg-[#e9ffed]/80 dark:bg-[#0b1f14]/80 backdrop-blur-lg fixed top-0 left-0 w-full z-50">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity scale-95 active:scale-90 transition-transform duration-200 text-[#0f5238] dark:text-[#e1fae7]">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-['Newsreader'] font-bold text-2xl tracking-tight text-[#0f5238] dark:text-[#e1fae7]">Step 3 of 5</h1>
+</div>
+<div class="font-['Newsreader'] italic font-semibold text-[#0f5238] dark:text-[#e1fae7]">Family Things</div>
+</div>
+</header>
+<main class="min-h-screen pt-24 pb-12 px-6 max-w-2xl mx-auto flex flex-col items-center">
+<!-- Editorial Header -->
+<div class="w-full mt-12 mb-16 text-center">
+<h2 class="font-headline text-5xl md:text-6xl text-primary leading-tight mb-4 tracking-tight">
+                How will you use <br/><span class="italic font-semibold">Family Things?</span>
+</h2>
+<p class="text-on-surface-variant text-lg max-w-md mx-auto">
+                Every story has a beginning. Choose your path to start gathering your digital heirlooms.
+            </p>
+</div>
+<!-- Role Selection Grid -->
+<div class="grid grid-cols-1 gap-8 w-full">
+<!-- Start a New Family (Head of Family) -->
+<div class="group relative overflow-hidden bg-surface-container-lowest rounded-xl p-8 transition-all duration-300 hover:translate-y-[-4px] shadow-[0_20px_40px_rgba(11,31,20,0.04)] border border-outline-variant/10">
+<div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+<div class="flex-shrink-0 w-24 h-24 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">home_pin</span>
+</div>
+<div class="flex-1 text-center md:text-left">
+<span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant text-xs font-bold rounded-full mb-4 uppercase tracking-widest">Organizer</span>
+<h3 class="font-headline text-3xl text-primary mb-2">Start a New Family</h3>
+<p class="text-on-surface-variant mb-6 text-base">Perfect for the head of the house. Create a private sanctuary, invite loved ones, and lead the coordination.</p>
+<button class="w-full md:w-auto bg-gradient-to-br from-[#9d4223] to-[#742406] text-white px-8 py-3 rounded-full font-semibold transition-all hover:opacity-90 active:scale-95">
+                            Create a Group
+                        </button>
+</div>
+</div>
+<!-- Decorative element -->
+<div class="absolute -right-8 -bottom-8 opacity-5">
+<span class="material-symbols-outlined text-9xl">diversity_1</span>
+</div>
+</div>
+<!-- Join an Existing Family (Family Member) -->
+<div class="group relative overflow-hidden bg-surface-container-low rounded-xl p-8 transition-all duration-300 hover:translate-y-[-4px] border border-outline-variant/10">
+<div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+<div class="flex-shrink-0 w-24 h-24 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">key</span>
+</div>
+<div class="flex-1 text-center md:text-left">
+<span class="inline-block px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant text-xs font-bold rounded-full mb-4 uppercase tracking-widest">Member</span>
+<h3 class="font-headline text-3xl text-primary mb-2">Join an Existing Family</h3>
+<p class="text-on-surface-variant mb-6 text-base">Enter the 6-digit invite code provided by your family organizer to jump straight into the conversation.</p>
+<button class="w-full md:w-auto bg-gradient-to-br from-[#0f5238] to-[#2d6a4f] text-white px-8 py-3 rounded-full font-semibold transition-all hover:opacity-90 active:scale-95">
+                            Enter Invite Code
+                        </button>
+</div>
+</div>
+<!-- Decorative element -->
+<div class="absolute -right-8 -bottom-8 opacity-5 text-primary">
+<span class="material-symbols-outlined text-9xl">family_restroom</span>
+</div>
+</div>
+</div>
+<!-- Footer / Support -->
+<div class="mt-16 text-center space-y-4">
+<p class="text-sm text-on-surface-variant font-medium">Not sure which one to pick?</p>
+<a class="text-secondary font-semibold hover:underline flex items-center justify-center gap-2" href="#">
+                Learn more about roles
+                <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</main>
+<!-- Contextual Illustration (Background Aesthetic) -->
+<div class="fixed bottom-0 left-0 w-full h-1/4 -z-10 overflow-hidden pointer-events-none opacity-20">
+<div class="absolute bottom-0 w-full h-full bg-gradient-to-t from-primary-fixed/30 to-transparent"></div>
+</div>
+</body></html>

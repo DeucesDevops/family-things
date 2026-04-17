@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#ffb95a",
+              "on-tertiary-container": "#ffd29d",
+              "surface-bright": "#e9ffed",
+              "on-secondary": "#ffffff",
+              "surface": "#e9ffed",
+              "on-primary": "#ffffff",
+              "outline": "#707973",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#0e5138",
+              "on-tertiary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#653f00",
+              "on-secondary-container": "#742406",
+              "surface-container-highest": "#d0e8d6",
+              "surface-container-low": "#e1fae7",
+              "secondary-fixed": "#ffdbd0",
+              "on-primary-fixed": "#002114",
+              "tertiary-fixed": "#ffddb6",
+              "background": "#e9ffed",
+              "tertiary-container": "#855500",
+              "surface-tint": "#2c694e",
+              "inverse-primary": "#95d4b3",
+              "on-surface-variant": "#404943",
+              "secondary": "#9d4223",
+              "surface-container-high": "#d6eedc",
+              "secondary-container": "#fe8c66",
+              "inverse-surface": "#213528",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed": "#2a1800",
+              "primary": "#0f5238",
+              "on-secondary-fixed-variant": "#7e2b0d",
+              "on-primary-container": "#a8e7c5",
+              "on-surface": "#0b1f14",
+              "inverse-on-surface": "#dff7e4",
+              "on-background": "#0b1f14",
+              "primary-fixed-dim": "#95d4b3",
+              "on-secondary-fixed": "#390b00",
+              "surface-container": "#dcf4e1",
+              "primary-container": "#2d6a4f",
+              "on-tertiary-fixed-variant": "#643f00",
+              "surface-variant": "#d0e8d6",
+              "error": "#ba1a1a",
+              "surface-dim": "#c8e0ce",
+              "primary-fixed": "#b1f0ce",
+              "outline-variant": "#bfc9c1",
+              "secondary-fixed-dim": "#ffb59d"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-gradient-orange { background: linear-gradient(135deg, #fe8c66 0%, #9d4223 100%); }
+        .editorial-gradient-blue { background: linear-gradient(135deg, #a8e7c5 0%, #0f5238 100%); }
+        .editorial-gradient-purple { background: linear-gradient(135deg, #9d4223 0%, #653f00 100%); }
+        .editorial-gradient-green { background: linear-gradient(135deg, #2d6a4f 0%, #0b1f14 100%); }
+        
+        /* Hide scrollbar but keep functionality */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 bg-[#e9ffed]/80 backdrop-blur-lg flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity scale-95 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined text-[#0f5238]" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Newsreader'] font-bold text-2xl tracking-tight text-[#0f5238]">Family Things</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="portrait of a smiling woman with warm lighting and a soft natural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_fM2tI-qv8bltYNVxEFPizl5Cnx5elYpkyT2qg5xadAFNRNEDDKWVF_djdVRUwXlY4csoH_G1iEglLQPYf16NeAAgvXC5zAwnL62YJSX-T8XsEgcg5JK2Kk62YOuACk6ESOGHe48CVb1KTnq2ppeCYaviZZzYNWvp6y6xlHQjouzPwEpEHfrpjnkJPjgHwquN0EfoXW0lpe9Wd732NAj0Bd-UJJA5xG9RgehkU7u356f37-sXghmRZLQcSv5Px0uz3vRQhsXw5YY"/>
+</div>
+</header>
+<main class="px-6 pt-4 max-w-4xl mx-auto">
+<!-- Search Section -->
+<section class="mb-10">
+<div class="relative group">
+<div class="absolute inset-y-0 left-5 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-primary/50" data-icon="search">search</span>
+</div>
+<input class="w-full bg-surface-container-low border-none rounded-full py-4 pl-14 pr-6 focus:ring-2 focus:ring-primary/10 font-body text-on-surface placeholder:text-on-surface-variant/50 transition-all" placeholder="Find a memory or plan..." type="text"/>
+</div>
+</section>
+<!-- Editorial Header -->
+<header class="mb-8">
+<span class="font-label text-secondary font-semibold tracking-widest uppercase text-xs">Collection</span>
+<h2 class="font-headline text-4xl mt-2 font-bold text-primary">Browse Categories</h2>
+<p class="text-on-surface-variant mt-2 max-w-xs">Organize your family moments into beautiful, curated chapters.</p>
+</header>
+<!-- Category Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Eat-outs -->
+<div class="editorial-gradient-orange h-72 rounded-xl relative overflow-hidden group cursor-pointer">
+<div class="absolute inset-0 opacity-20 transition-transform duration-700 group-hover:scale-110">
+<img alt="Restaurant" class="w-full h-full object-cover mix-blend-overlay" data-alt="Close up of a beautifully set restaurant table with warm candlelight and blurred background of diners" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWRbMhecKKujAsqej08Y0S-5_zgqNdrkyHcAZFQaq1afXw7a3fwQomLao0MF2eoMNwvE2KYmSNU4P9I_y2ppB1sTRBka8pvIsD0er1qKIEzFUHOrXSE6T8rc9A9zR9Iq-aAG0YvqEVj3k_13dwgmHM7ekFH51LmjvP08MpRpxVCnIHknBFIPDOXbCEQJCPNqkJtf92LEBPHM9rQrfH_jy9TTkkN6zM0Tx9_AIcbxqyIx31XpMVCAcX0Ao--CtkFfXttgEb20dbfLI"/>
+</div>
+<div class="absolute inset-0 p-8 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div class="bg-white/20 backdrop-blur-md rounded-full p-4">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="restaurant">restaurant</span>
+</div>
+<span class="bg-white/90 text-secondary font-bold px-4 py-1 rounded-full text-xs shadow-sm">3 upcoming</span>
+</div>
+<div>
+<h3 class="font-headline text-3xl text-white font-bold leading-tight">Eat-outs</h3>
+<p class="text-white/80 text-sm mt-1">Dinner dates &amp; family brunches</p>
+</div>
+</div>
+</div>
+<!-- Holidays -->
+<div class="editorial-gradient-blue h-72 rounded-xl relative overflow-hidden group cursor-pointer">
+<div class="absolute inset-0 opacity-25 transition-transform duration-700 group-hover:scale-110">
+<img alt="Beach" class="w-full h-full object-cover mix-blend-soft-light" data-alt="Turquoise ocean waves gently lapping onto a pristine white sand beach at sunrise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWz7VGbLdIuE0cmo8Yq8tLNtmaEeF2JyfvA_XWS_GbmRI-Z1nhqwqzRYpN76narKo5r0CfxC1n6EkOtGGc2pmo1_FeGLskTvrymA6Mrb4K1mONISkQbZtu-QG4_LV7sgW9XhcgJ1CSCd3D5hCdin_QwnVLoA1UCu46YTgvbuLqmWRzHUTF9dxR5Alj0h70t1qymWkcI5m42RJTfkNiJobgF-1n-5ZK-VcTt1F6gfpPoWsK-T_B56YzR9GOop_fPEiPxHgC8sjAZ2s"/>
+</div>
+<div class="absolute inset-0 p-8 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div class="bg-white/20 backdrop-blur-md rounded-full p-4">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="beach_access">beach_access</span>
+</div>
+<span class="bg-white/90 text-primary font-bold px-4 py-1 rounded-full text-xs shadow-sm">1 upcoming</span>
+</div>
+<div>
+<h3 class="font-headline text-3xl text-white font-bold leading-tight">Holidays</h3>
+<p class="text-white/80 text-sm mt-1">Travel diaries &amp; summer breaks</p>
+</div>
+</div>
+</div>
+<!-- Celebrations -->
+<div class="editorial-gradient-purple h-72 md:col-span-2 rounded-xl relative overflow-hidden group cursor-pointer">
+<div class="absolute inset-0 opacity-30 transition-transform duration-700 group-hover:scale-105">
+<img alt="Party" class="w-full h-full object-cover" data-alt="Festive celebration with blurred golden lights, colorful balloons and sparkling confetti in the air" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzr2L4mX9NmNDodtqCOqkwvfEdfw17Hk3Zg2SUGKFCwHQ7R8MHym9NKbtlM_9J9tyRCQWYo5A4ZsmRLpP_eAnPyk0V_MLLoW_CUYgouJOzChT7SnatAgUcQwCGLRGFy7dWwJLgFaY0nqvQ12jc0MfeArBIq49_7olILGZN23X6MeL2uLb_NWOF1cL7VEIdCKfoCWqzMPFXsE-MEVcfQGa0g2wrGxm4gcJz7ufnYC-tLdSD2cAa7nKpydyFGObeUxntn7JkFY9BOyc"/>
+</div>
+<div class="absolute inset-0 p-8 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div class="bg-white/20 backdrop-blur-md rounded-full p-4">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="celebration">celebration</span>
+</div>
+<span class="bg-white/90 text-secondary font-bold px-4 py-1 rounded-full text-xs shadow-sm">5 upcoming</span>
+</div>
+<div class="max-w-md">
+<h3 class="font-headline text-4xl text-white font-bold leading-tight">Celebrations</h3>
+<p class="text-white/80 text-base mt-1 italic font-headline">Birthdays, anniversaries, and all the special milestones that make us family.</p>
+</div>
+</div>
+</div>
+<!-- Activities -->
+<div class="editorial-gradient-green h-72 rounded-xl relative overflow-hidden group cursor-pointer">
+<div class="absolute inset-0 opacity-20 transition-transform duration-700 group-hover:scale-110">
+<img alt="Forest" class="w-full h-full object-cover mix-blend-luminosity" data-alt="Tall pine trees in a misty forest with soft morning sunlight filtering through the branches" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjRL_ALQKJMdVqIaIROm8pizvmOST1XxehAKdGTqsF-0LlrobAQYvcEfOnUuIGd9tyM-ctr-ptbt8PIPwA_WI4br6EKRFgnCxsXgUm0IEU381A1pQnUsd2WSe1jdSfsPGCgirUnaHkZFgg58QiZMeHPLO8PbEs6yBGVu0amuM5ti0iq3vePCW55x_nYUmSn-QSy4tfkSvzc9EjmccW1yZMoV7JlQbjg5zM-ynEOdNCZ4Ruof6SwGukBeghroJwLgyqL5Vj79-vQ9s"/>
+</div>
+<div class="absolute inset-0 p-8 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div class="bg-white/20 backdrop-blur-md rounded-full p-4">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="ads_click">ads_click</span>
+</div>
+<span class="bg-white/90 text-primary font-bold px-4 py-1 rounded-full text-xs shadow-sm">8 upcoming</span>
+</div>
+<div>
+<h3 class="font-headline text-3xl text-white font-bold leading-tight">Activities</h3>
+<p class="text-white/80 text-sm mt-1">Weekend hikes &amp; creative play</p>
+</div>
+</div>
+</div>
+<!-- New Custom Category (Placeholder for asymmetry) -->
+<div class="bg-surface-container-low border border-dashed border-outline-variant/50 h-72 rounded-xl flex flex-col items-center justify-center p-8 text-center hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-4 shadow-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="add">add</span>
+</div>
+<h3 class="font-headline text-xl text-primary font-bold">New Category</h3>
+<p class="text-on-surface-variant text-sm mt-1">Create your own tradition</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-[#ffffff]/90 backdrop-blur-xl shadow-[0_-10px_40px_rgba(11,31,20,0.04)] rounded-t-[3rem] pb-safe">
+<a class="flex flex-col items-center justify-center text-[#0f5238]/50 px-4 py-2 hover:text-[#9d4223] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[11px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#0f5238]/50 px-4 py-2 hover:text-[#9d4223] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[11px] mt-1">Calendar</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#0f5238]/50 px-4 py-2 hover:text-[#9d4223] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[11px] mt-1">Add</span>
+</a>
+<!-- ACTIVE TAB -->
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#0f5238] to-[#2d6a4f] text-white rounded-full px-6 py-2 scale-95 duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[11px] mt-1">Browse</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#0f5238]/50 px-4 py-2 hover:text-[#9d4223] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[11px] mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

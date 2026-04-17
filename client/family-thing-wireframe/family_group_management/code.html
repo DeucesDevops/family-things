@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#707973",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed-variant": "#7e2b0d",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#0e5138",
+                    "primary-fixed": "#b1f0ce",
+                    "tertiary": "#653f00",
+                    "secondary-fixed-dim": "#ffb59d",
+                    "surface-container-low": "#e1fae7",
+                    "secondary-container": "#fe8c66",
+                    "inverse-primary": "#95d4b3",
+                    "tertiary-container": "#855500",
+                    "surface": "#e9ffed",
+                    "tertiary-fixed": "#ffddb6",
+                    "surface-variant": "#d0e8d6",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#404943",
+                    "primary-fixed-dim": "#95d4b3",
+                    "surface-container-highest": "#d0e8d6",
+                    "tertiary-fixed-dim": "#ffb95a",
+                    "on-tertiary-container": "#ffd29d",
+                    "background": "#e9ffed",
+                    "secondary": "#9d4223",
+                    "primary": "#0f5238",
+                    "surface-dim": "#c8e0ce",
+                    "on-secondary-container": "#742406",
+                    "on-background": "#0b1f14",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#002114",
+                    "surface-tint": "#2c694e",
+                    "surface-bright": "#e9ffed",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#a8e7c5",
+                    "surface-container": "#dcf4e1",
+                    "inverse-on-surface": "#dff7e4",
+                    "surface-container-high": "#d6eedc",
+                    "on-tertiary-fixed": "#2a1800",
+                    "on-surface": "#0b1f14",
+                    "on-secondary-fixed": "#390b00",
+                    "on-tertiary-fixed-variant": "#643f00",
+                    "primary-container": "#2d6a4f",
+                    "outline-variant": "#bfc9c1",
+                    "inverse-surface": "#213528",
+                    "secondary-fixed": "#ffdbd0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": [
+                            "Newsreader"
+                    ],
+                    "body": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "label": [
+                            "Plus Jakarta Sans"
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(11, 31, 20, 0.06);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#e9ffed]/80 dark:bg-emerald-950/80 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="text-emerald-900 dark:text-emerald-100 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-serif italic text-2xl tracking-tight text-emerald-900 dark:text-emerald-100">The Editorial Hearth</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container transition-opacity hover:opacity-80">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a middle-aged man with a warm smile and gentle eyes in soft natural library lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVkZIa8RDInC9Mv5r7SyM3G9NI_D3kW_IED2XsDXuPaSdmqPxJ-AzcyTcUaTlyTEnq_HHoURJWBc-43o6MDwWxW0ar0uwE9mdt8C_7_dug0Zqomqlp4X3Ya6ELSKvM5n8LTV84j0y1skzatmuLtzBVzUJEnSTDxw2YqyQWAfPLgozDg5xLVCJ2IzM5bHv1pvn-EtXKeTMT8g5eaATebE7ix8q15GA6iNYYjFZd8dn7MQ3eSlMAoG1ZvRTWaCRFaU1opD6-sDHBViU"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto min-h-screen">
+<!-- Hero Section: Concentric Rings & Family Identity -->
+<section class="flex flex-col items-center mb-16 relative">
+<div class="relative flex items-center justify-center mb-8">
+<!-- Concentric Rings -->
+<div class="absolute w-64 h-64 rounded-full border border-primary/10 animate-pulse"></div>
+<div class="absolute w-48 h-48 rounded-full border border-primary/20"></div>
+<div class="absolute w-36 h-36 rounded-full border border-primary/30"></div>
+<div class="w-24 h-24 bg-gradient-to-br from-primary to-primary-container rounded-full flex items-center justify-center shadow-lg z-10">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+</div>
+</div>
+<div class="text-center space-y-2">
+<h2 class="font-headline text-5xl font-bold tracking-tight text-primary">The Banda Family</h2>
+<p class="font-body text-secondary font-medium tracking-wide">ESTABLISHED 2012</p>
+</div>
+<!-- Shareable Code Component -->
+<div class="mt-10 bg-surface-container-lowest rounded-xl px-8 py-4 editorial-shadow flex items-center gap-6 border border-outline-variant/15">
+<div class="space-y-0.5">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-outline">Family Invite Code</span>
+<p class="font-body font-bold text-2xl text-on-surface tracking-widest">BANDA7</p>
+</div>
+<button class="w-12 h-12 rounded-full bg-surface-container-low text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</section>
+<!-- Members Grid/List -->
+<section class="space-y-10">
+<div class="flex justify-between items-end px-2">
+<h3 class="font-headline text-3xl italic text-on-surface">The Circle</h3>
+<span class="font-label text-sm text-outline">5 Active Members</span>
+</div>
+<div class="space-y-4">
+<!-- Member Card: Admin -->
+<div class="group bg-surface-container-lowest p-5 rounded-xl flex items-center gap-5 transition-all hover:-translate-y-1 hover:shadow-xl border border-outline-variant/10">
+<div class="relative">
+<img alt="Bernard" class="w-16 h-16 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="portrait of an african american father with a kind face and salt-and-pepper beard in warm home light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQednTMP6KoUNG1p0Y0ubMzu8vArvGmjBd4sfWuNida3Z9u92rfeemWV3pqPy99ljfBO8oqNfPuDjXpWD2cz_rg2Lk6wdJe115x271i8jYjgnGGboeApBdDooHEOOt-L9l9AU1jWbCFufvgJjJAVugHaDF13as-5VeRA9lBdWX8_DVKQ1IgU7LdyplsYeihLhrS-QHC-cIX0xkJPf5My4Rcf3Yo30D_8IACgNP-99yPiGsP82LSwyCj8rLGgrM7BzqY0mWk42HSJQ"/>
+<div class="absolute -bottom-1 -right-1 bg-primary text-white p-1 rounded-full border-2 border-white">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1">
+<h4 class="font-body font-bold text-lg text-on-surface">Bernard</h4>
+<p class="font-label text-xs uppercase tracking-widest text-primary font-semibold">Admin</p>
+</div>
+<span class="material-symbols-outlined text-outline/30" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Member Card -->
+<div class="group bg-surface-container p-5 rounded-xl flex items-center gap-5 transition-all hover:-translate-y-1 hover:shadow-xl border border-outline-variant/5">
+<img alt="Amara" class="w-16 h-16 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="soft focused portrait of a young woman with braided hair smiling in a sun-drenched outdoor garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfgX9YGn5xahSXQtCIcKBgIw5WhqHWA6z5NFSrYeUJWUw5b0zCiNXv2QEOmYB_v50rN_u3Lwwg3o6AZj4ej5oQy8DFNMvQg3CA10VqSPAe-B32cq6ttdF8xBUtsGODJOw80v-0MjAOGsHo1ZHs8tEvax3FGvdXGH6ue2SKjZ0pn7ooXxHHmUsSEwSz1cWn8zRGXbVR8YtaMSp4QoIFpdR4dXNSd5MqyeUrRLDxvlP5-A1nt8sBUCWGJ7_ePxEdd8AwkTZ8Jzx-jQM"/>
+<div class="flex-1">
+<h4 class="font-body font-bold text-lg text-on-surface">Amara</h4>
+<p class="font-label text-xs uppercase tracking-widest text-outline">Member</p>
+</div>
+<span class="material-symbols-outlined text-outline/30" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Member Card -->
+<div class="group bg-surface-container-lowest p-5 rounded-xl flex items-center gap-5 transition-all hover:-translate-y-1 hover:shadow-xl border border-outline-variant/10">
+<img alt="Kendi" class="w-16 h-16 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="expressive portrait of a young woman laughing with soft natural lighting and warm skin tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9ENAktmxbP8ei5pMkImJXODM4MM6qfGugaHvQos3cNVAiubSsbn7k1OcJ_2T4AN9fNorZJceRA0S-cRhx_ZVB1eE-Rh7ONRj6G6mZ2mvAx1rhYV8ffTFtRHkV7bi9B2bWLtea-ldL2YJXjxQwykeSZEAIl528-q2yOZ-Zw8xlxMZF5tfSFi-5D9f1l_pOt0D8wi7iO_meALlavlYGp7TFUFkIXuZS4U4o65mOv8yMFJZ2CCdGAHIN3Zqaf3i6xRcMpwBu_sFHK3Q"/>
+<div class="flex-1">
+<h4 class="font-body font-bold text-lg text-on-surface">Kendi</h4>
+<p class="font-label text-xs uppercase tracking-widest text-outline">Member</p>
+</div>
+<span class="material-symbols-outlined text-outline/30" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Member Card -->
+<div class="group bg-surface-container p-5 rounded-xl flex items-center gap-5 transition-all hover:-translate-y-1 hover:shadow-xl border border-outline-variant/5">
+<img alt="Jabari" class="w-16 h-16 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="portrait of a young african american man with glasses in a warm cozy interior setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9JvLKt1QaTxTPnylUd6EG4IJsIbPM2uTbNxP3-mydkuu3t-VrUaVF6zZeH9ou81pYg2aOEAq8oPOjQBw3LdfjF3tufKnI9pI0umsVqpzV149cFdyRLKRudGPuGRadnZqRCG9tAuf06LMX2ZyaRyPsofQWtfNInBjxeN7FUMh5xYKtA3DE__oIEXfDI7vlnRYvFXZZdOeKK2lXL3mJ0XwW4Qyb8Yk-yL1pGjbhf894d769XSpLXGEzcOZWQlBJnsRafLBtfnosQjM"/>
+<div class="flex-1">
+<h4 class="font-body font-bold text-lg text-on-surface">Jabari</h4>
+<p class="font-label text-xs uppercase tracking-widest text-outline">Member</p>
+</div>
+<span class="material-symbols-outlined text-outline/30" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Member Card -->
+<div class="group bg-surface-container-lowest p-5 rounded-xl flex items-center gap-5 transition-all hover:-translate-y-1 hover:shadow-xl border border-outline-variant/10">
+<img alt="Mum" class="w-16 h-16 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="warm portrait of an older woman with a gentle expression wearing a green linen scarf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFWBkxrffIpkiWYgFclQ_P6x9fjg92BgnJzqMqNDoy2aAUJAMl7SDwHmLQpAm06vFzeUpz2Gpxs1LkSmfkVxM-k7BbO4KDqnUSNXoecBKX6MAdAlZBn59JowqKRgHuAL2w1pgdhMqbVnoYfW0d6DAx5oCCOUyOGRA98BKmKo2-t7SzXLmB0M6gp1lBmh9piX7PwCChWZgN7uNiY2sjd6wC7H2yqRNT1Tz6_oAGWr_Ncj-eo7Kt0Ub_wkNz3bYh9l4kQW6flOdK8a8"/>
+<div class="flex-1">
+<h4 class="font-body font-bold text-lg text-on-surface">Mum</h4>
+<p class="font-label text-xs uppercase tracking-widest text-outline">Member</p>
+</div>
+<span class="material-symbols-outlined text-outline/30" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Invite Button -->
+<button class="w-full py-6 mt-8 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-body font-bold text-lg flex items-center justify-center gap-3 active:scale-95 transition-transform hover:opacity-90 editorial-shadow">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                + Invite a Family Member
+            </button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-8 pb-6 pt-4 bg-[#e9ffed]/90 dark:bg-emerald-950/90 backdrop-blur-2xl rounded-t-[3rem] shadow-[0_-20px_40px_rgba(11,31,20,0.06)] z-50">
+<div class="flex flex-col items-center justify-center text-emerald-800/70 dark:text-emerald-200/70 p-2 hover:text-emerald-900 transition-opacity active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-sans text-[11px] font-semibold tracking-wider uppercase">Journal</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-gradient-to-br from-[#0f5238] to-[#2d6a4f] text-white rounded-full p-3 scale-110 -translate-y-2 transition-all shadow-lg active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="family_restroom">family_restroom</span>
+<span class="font-sans text-[11px] font-semibold tracking-wider uppercase">Circle</span>
+</div>
+<div class="flex flex-col items-center justify-center text-emerald-800/70 dark:text-emerald-200/70 p-2 hover:text-emerald-900 transition-opacity active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-sans text-[11px] font-semibold tracking-wider uppercase">Rituals</span>
+</div>
+<div class="flex flex-col items-center justify-center text-emerald-800/70 dark:text-emerald-200/70 p-2 hover:text-emerald-900 transition-opacity active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-sans text-[11px] font-semibold tracking-wider uppercase">Settings</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>New Family Memory - Event Details</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#0e5138",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#213528",
+                    "on-tertiary-container": "#ffd29d",
+                    "surface-tint": "#2c694e",
+                    "surface-container-highest": "#d0e8d6",
+                    "surface": "#e9ffed",
+                    "secondary": "#9d4223",
+                    "inverse-on-surface": "#dff7e4",
+                    "tertiary-fixed": "#ffddb6",
+                    "surface-container-low": "#e1fae7",
+                    "outline": "#707973",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#fe8c66",
+                    "background": "#e9ffed",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#e9ffed",
+                    "secondary-fixed": "#ffdbd0",
+                    "on-primary-fixed": "#002114",
+                    "on-primary-container": "#a8e7c5",
+                    "on-surface-variant": "#404943",
+                    "on-surface": "#0b1f14",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#d6eedc",
+                    "on-tertiary-fixed": "#2a1800",
+                    "primary-container": "#2d6a4f",
+                    "on-secondary-fixed": "#390b00",
+                    "surface-container": "#dcf4e1",
+                    "surface-variant": "#d0e8d6",
+                    "tertiary": "#653f00",
+                    "outline-variant": "#bfc9c1",
+                    "primary-fixed-dim": "#95d4b3",
+                    "surface-dim": "#c8e0ce",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#0b1f14",
+                    "inverse-primary": "#95d4b3",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#ffb59d",
+                    "primary": "#0f5238",
+                    "tertiary-fixed-dim": "#ffb95a",
+                    "on-secondary-fixed-variant": "#7e2b0d",
+                    "tertiary-container": "#855500",
+                    "primary-fixed": "#b1f0ce",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#643f00",
+                    "on-secondary-container": "#742406"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #e9ffed;
+        }
+        .serif-italic {
+            font-family: 'Newsreader', serif;
+            font-style: italic;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-[#e9ffed]/80 dark:bg-emerald-950/80 backdrop-blur-xl sticky top-0 z-50 shadow-sm dark:shadow-none h-16 w-full flex justify-between items-center px-6">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 duration-200 hover:opacity-80 transition-opacity text-emerald-900 dark:text-emerald-50">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-serif italic tracking-tight text-lg font-serif text-emerald-900 dark:text-emerald-50">New Family Memory</h1>
+</div>
+<div class="text-emerald-700/60 font-sans uppercase tracking-widest text-[10px] font-bold">
+            Step 2 of 4
+        </div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-2xl mx-auto px-6 py-10 mb-32">
+<!-- Header Section -->
+<section class="mb-12">
+<span class="text-secondary font-bold text-[10px] uppercase tracking-[0.2em] mb-2 block">Step 02</span>
+<h2 class="text-4xl md:text-5xl font-headline font-medium tracking-tight text-on-surface mb-4">
+                What’s the <span class="serif-italic">occasion</span>?
+            </h2>
+<p class="text-on-surface-variant leading-relaxed font-body">
+                Give your memory a name and a place in time. This helps keep our family journal organized and easy to search later.
+            </p>
+</section>
+<!-- Form Layout: Asymmetric Bento Style -->
+<div class="grid grid-cols-1 gap-8">
+<!-- Event Name Card -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(11,31,20,0.04)] relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-6xl" data-icon="edit_note">edit_note</span>
+</div>
+<label class="block text-[10px] font-bold uppercase tracking-widest text-secondary mb-4" for="event-name">Event Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-full px-6 py-4 text-lg font-body focus:ring-2 focus:ring-primary/10 transition-all text-on-surface placeholder-on-surface-variant/40" id="event-name" placeholder="Enter memory title..." type="text" value="Pizza Friday at Nando's"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Date & Time Card -->
+<div class="bg-surface-container rounded-xl p-8 flex flex-col justify-between">
+<div>
+<label class="block text-[10px] font-bold uppercase tracking-widest text-secondary mb-4">Date &amp; Time</label>
+<div class="flex items-center gap-3 text-emerald-900 font-headline italic text-xl mb-6">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+                            Friday, Oct 27 · 7:00 PM
+                        </div>
+</div>
+<button class="bg-surface-container-lowest text-primary text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-full self-start hover:brightness-105 transition-all">
+                        Change Date
+                    </button>
+</div>
+<!-- Location Card (Optional) -->
+<div class="bg-surface-container-high rounded-xl p-8">
+<label class="block text-[10px] font-bold uppercase tracking-widest text-secondary mb-4">Location (Optional)</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant/60" data-icon="location_on">location_on</span>
+<input class="w-full bg-surface-container-lowest border-none rounded-full pl-12 pr-6 py-4 text-sm font-body focus:ring-2 focus:ring-primary/10 transition-all text-on-surface" placeholder="Add a place..." type="text"/>
+</div>
+<div class="mt-6 rounded-lg overflow-hidden h-24 relative grayscale hover:grayscale-0 transition-all duration-700">
+<img class="w-full h-full object-cover" data-alt="a minimalist map visualization showing a city neighborhood with soft green and cream tones to match the ui palette" data-location="London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQQjooXSTy263LzsfA0v731zjN1t6QzEPs_L7owkRgpvjWVGiWYOtisfJwZ3Q_0NnZKoA_roVZpuVFQ2zB-_SEoJ3l1AMh-9DwCrFasDZLyiBiDZlTlnrzn9KKn4HNTCi3gEqRjtiSUZiMDPYXe3T4gqGSC7-iXpkD-hIF7DGjHMbzFxPI5rr6DGOGBPb2nfuMBygV4hHmmypqnEaVYlueDbz77Z8-Zt3Q47qWQG6u67kmO7uF4ZcHJuu9lrwQvFBbtHI_zLVChx8"/>
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+</div>
+</div>
+</div>
+<!-- Contextual Tip -->
+<div class="flex items-start gap-4 p-6 bg-tertiary-fixed/30 rounded-xl">
+<span class="material-symbols-outlined text-tertiary" data-icon="lightbulb">lightbulb</span>
+<p class="text-sm text-on-tertiary-fixed-variant italic">
+                    Memories with a specific location and time are 40% more likely to be revisited in your Year in Review.
+                </p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-10 pb-8 pt-4 bg-[#e9ffed]/90 dark:bg-emerald-950/90 backdrop-blur-2xl shadow-[0_-20px_40px_rgba(11,31,20,0.06)] rounded-t-[3rem]">
+<!-- Back Destination -->
+<button class="flex flex-col items-center justify-center text-emerald-800 dark:text-emerald-200 px-8 py-3 hover:brightness-110 transition-all active:scale-98">
+<span class="material-symbols-outlined mb-1" data-icon="chevron_left">chevron_left</span>
+<span class="font-sans uppercase tracking-widest text-[10px] font-bold">Back</span>
+</button>
+<!-- Next Destination (Active for Flow) -->
+<button class="flex flex-col items-center justify-center bg-gradient-to-r from-[#0f5238] to-[#2d6a4f] text-white rounded-full px-12 py-3 hover:brightness-110 transition-all active:scale-98 shadow-lg shadow-emerald-900/20">
+<div class="flex items-center gap-2">
+<span class="font-sans uppercase tracking-widest text-[10px] font-bold">Next</span>
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</div>
+</button>
+</nav>
+</body></html>
