@@ -1,243 +1,45 @@
-# Family Things — App Plan
+Here's a solid, production-ready **tech stack recommendation** for your "Family things" app (the family happiness organizer with outing suggestions, holidays, best wishes, grooming reminders, shared calendar, etc.) using **React Native** for the mobile frontend (iOS + Android) and **Spring Boot** as the backend.
 
-A family-first planning hub where members coordinate events, holidays, eat-outs, and shared activities — all in one place, synced in real time.
+This combination is popular for full-stack mobile apps needing secure APIs, user/family groups, and some real-time elements (e.g., shared calendar updates, voting on outings, or notifications). It's more "traditional enterprise" than Firebase but gives you full control, easier scaling later, and better fits if you prefer Java/Spring ecosystem.
 
----
+### Why React Native + Spring Boot Fits Well
+- **React Native** → Cross-platform mobile (one codebase for iOS/Android), great UI libraries for family-friendly interfaces (calendars, cards, polls).
+- **Spring Boot** → Robust, secure REST APIs, excellent for authentication (JWT), database handling, scheduling reminders, integrating external APIs (Google Places, weather, AI).
+- In 2026, this stack remains strong for apps requiring complex business logic, role-based access (e.g., family admins), and potential web extension later.
 
-## Tech Stack
+### Recommended Tech Stack (2026-Optimized)
 
-| Layer | Technology |
-|---|---|
-| Mobile | Expo + React Native + TypeScript |
-| Navigation | Expo Router (file-based) |
-| Auth | Clerk |
-| Backend | Express.js + TypeScript |
-| Database | Neon (PostgreSQL) |
-| ORM | Drizzle ORM |
-| Validation | Zod (client + server) |
-| Monorepo | pnpm workspaces |
+| Layer                  | Recommendation                          | Why It Fits Your App                                      | Key Libraries/Tools (2026-relevant)                  | Alternatives (if needed)                  |
+|------------------------|-----------------------------------------|-----------------------------------------------------------|------------------------------------------------------|-------------------------------------------|
+| **Mobile Frontend**   | React Native (with Expo for faster start) | Cross-platform, huge ecosystem for calendars/reminders/UI | Expo (managed workflow), React Navigation, Zustand or Redux Toolkit, TanStack Query (for API caching) | Bare React Native (if deep native needed) |
+| **UI Component Library** | NativeBase / Gluestack-UI / Tamagui   | Beautiful, customizable, themeable family-style UI (cards, modals, date pickers) | Gluestack (production-ready templates in 2026)      | UI Kitten, React Native Paper            |
+| **State Management**  | Zustand or Jotai                       | Lightweight, simple for family data, moods, preferences  | Zustand (very popular in RN 2026)                   | Redux Toolkit, MobX                      |
+| **Backend**           | Spring Boot 3.3+ (Java 21+)            | Fast APIs, embedded Tomcat, easy scheduling for reminders | Spring Web, Spring Data JPA, Spring Security        | Spring Boot 3.x (latest stable)          |
+| **Authentication**    | JWT (stateless) + Spring Security      | Secure family logins, shared access via family groups    | Spring Security + JJWT (or Nimbus JOSE+JWT)         | OAuth2 (Google/Apple sign-in) + JWT      |
+| **Database**          | PostgreSQL (or MySQL)                  | Reliable relational DB for users, families, events, reminders | Spring Data JPA + Hibernate                         | H2 (dev), MongoDB (if more flexible)     |
+| **Real-time Features** | WebSocket + STOMP (or SSE for simpler) | Live calendar sync, outing vote updates, notifications   | Spring WebSocket + STOMP over SockJS                | Server-Sent Events (SSE) via WebFlux     |
+| **Push Notifications**| Firebase Cloud Messaging (FCM)        | Reliable cross-platform push for reminders/wishes        | react-native-firebase or Expo Notifications         | OneSignal (easier setup)                 |
+| **AI / Suggestions**  | External API calls (Gemini / OpenAI)   | Personalized outing/holiday/best-wish generation         | RestTemplate or WebClient (reactive)                | Grok API, Anthropic Claude               |
+| **Location / External**| Google Places API + OpenWeatherMap    | Nearby outings, weather-based suggestions                 | Axios or fetch in RN                                | Mapbox (cheaper)                         |
+| **Scheduling / Reminders** | Spring @Scheduled or Quartz          | Background grooming/birthday reminders                   | Spring Boot Scheduler                               | Quartz Scheduler (more advanced)         |
+| **Payments (premium)**| Stripe                                 | In-app subscriptions for advanced AI/features            | Stripe Java SDK                                     | —                                        |
+| **Deployment**        | Backend: Docker + Railway / Render / AWS ECS<br>Mobile: Expo EAS or App Store / Play Store | Easy scaling, CI/CD                                      | Docker, GitHub Actions / GitLab CI                  | Heroku, Fly.io                           |
 
----
+### Core Architecture Flow
+1. **User/Family Onboarding** → React Native app → Sign up/login (JWT via Spring Security) → Create/join family group (stored in PostgreSQL).
+2. **Shared Data** → Family preferences, calendar events, reminders → Stored in DB, synced via REST + optional WebSocket for real-time (e.g., someone adds an outing → everyone sees update live).
+3. **Suggestions Engine** → App sends prefs/location → Backend calls Google Places/Weather → Optionally feeds to Gemini API → Returns tailored outings/holidays → Family votes via poll (REST or WebSocket).
+4. **Reminders & Wishes** → Backend scheduler checks dates → Sends FCM push + generates wish text via AI.
+5. **Notifications** → Grooming due? Birthday? Outing approved? → FCM push + in-app badge.
 
-## Screens (8 total)
+### Getting Started Tips (MVP Path)
+- **Start with Expo + React Native** → `npx create-expo-app FamilyGlow --template blank-typescript`
+- **Backend**: Spring Initializr → Add: Web, Security, JPA, PostgreSQL, WebSocket (if real-time needed early).
+- **Auth Setup**: Implement JWT login/register endpoints first (tons of 2025/2026 tutorials for Spring Boot 3 + JWT).
+- **Connect**: Use Axios/fetch in RN to hit `http://your-backend/api/...` (localhost during dev, CORS enabled).
+- **Real-time (phase 2)**: Add `@EnableWebSocketMessageBroker`, configure STOMP → Use `@stomp/stompjs` + `sockjs-client` in React Native.
+- **Test Locally**: Backend on :8080, Expo on phone/emulator (use ngrok/tunnel for mobile → local backend).
 
-| # | Screen | Purpose |
-|---|--------|---------|
-| 1 | Auth / Onboarding | Clerk sign-up/login, family invite code join, 3-slide carousel |
-| 2 | Home Dashboard | Upcoming events feed, quick-add grid, family greeting |
-| 3 | Calendar | Month / Week / Agenda toggle, dot indicators, timeline |
-| 4 | Event Detail | Full event info, RSVP (Going / Maybe / Skip), attendees |
-| 5 | Create Event | 4-step wizard: Type → Details → Guests → Confirm |
-| 6 | Browse / Categories | Search bar, category banners with upcoming counts |
-| 7 | Family Group | Member list, roles (Admin/Member), shareable family code |
-| 8 | Profile & Settings | Stats, notification toggles, Clerk-managed account |
+This stack is battle-tested (many full-stack Java + RN apps use it), secure by default with Spring Security, and scales well if your app grows (e.g., millions of users → add Redis for caching, Kafka for events).
 
----
-
-## Event Categories
-
-- 🍽️ **Eat-outs** — Restaurants, takeaways, food trips
-- 🏖️ **Holidays** — Trips, getaways, vacations
-- 🎉 **Celebrations** — Birthdays, anniversaries, milestones
-- 🎯 **Activities** — Sports, games, nature, cinema
-- ✈️ **Trips** — Multi-day travel
-- 🎭 **Shows** — Theatre, concerts, events
-
----
-
-## Monorepo Structure
-
-```
-family-things/
-├── apps/
-│   ├── mobile/                        # Expo + React Native + TypeScript
-│   │   └── src/
-│   │       ├── app/                   # Expo Router file-based routes
-│   │       │   ├── (auth)/
-│   │       │   │   ├── sign-in.tsx
-│   │       │   │   └── onboarding.tsx
-│   │       │   ├── (tabs)/
-│   │       │   │   ├── index.tsx      # Home
-│   │       │   │   ├── calendar.tsx
-│   │       │   │   ├── browse.tsx
-│   │       │   │   └── profile.tsx
-│   │       │   └── events/
-│   │       │       ├── [id].tsx       # Event Detail
-│   │       │       └── create.tsx     # Create Wizard
-│   │       ├── modules/
-│   │       │   ├── auth/
-│   │       │   ├── home/
-│   │       │   ├── calendar/
-│   │       │   ├── events/
-│   │       │   ├── categories/
-│   │       │   ├── family/
-│   │       │   └── profile/
-│   │       └── lib/                   # API client, Clerk config, constants
-│   │
-│   └── api/                           # Express.js + TypeScript
-│       └── src/
-│           ├── modules/
-│           │   ├── auth/              # Clerk webhook + JWT middleware
-│           │   ├── events/            # CRUD + RSVP endpoints
-│           │   ├── family/            # Family group management
-│           │   └── members/           # Roles + invites
-│           ├── db/                    # Drizzle client + migrations
-│           └── lib/                   # Middleware, error handling, logger
-│
-└── packages/
-    ├── shared-types/                  # Zod schemas + shared TS interfaces/enums
-    ├── ui/                            # Shared React Native components
-    └── utils/                         # Date helpers, formatters, constants
-```
-
-Each API module follows the same internal structure:
-
-```
-events/
-├── events.router.ts
-├── events.controller.ts
-├── events.service.ts
-└── events.schema.ts        # Zod validation
-```
-
----
-
-## Database Schema (Neon / Drizzle)
-
-### families
-| Column | Type | Notes |
-|--------|------|-------|
-| id | uuid PK | |
-| name | text | e.g. "The Banda Family" |
-| code | varchar(8) | Unique invite code |
-| created_at | timestamp | |
-
-### users
-| Column | Type | Notes |
-|--------|------|-------|
-| id | uuid PK | Matches Clerk user ID |
-| family_id | uuid FK | → families |
-| name | text | |
-| email | text | |
-| role | enum | admin \| member |
-| created_at | timestamp | |
-
-### events
-| Column | Type | Notes |
-|--------|------|-------|
-| id | uuid PK | |
-| family_id | uuid FK | → families |
-| created_by | uuid FK | → users |
-| title | text | |
-| category | enum | eat-out \| holiday \| celebration \| activity \| trip \| show |
-| date | timestamp | |
-| location | text | nullable |
-| notes | text | nullable |
-| created_at | timestamp | |
-
-### rsvps
-| Column | Type | Notes |
-|--------|------|-------|
-| id | uuid PK | |
-| event_id | uuid FK | → events |
-| user_id | uuid FK | → users |
-| status | enum | going \| maybe \| skip |
-| updated_at | timestamp | |
-
----
-
-## API Endpoints
-
-### Auth
-| Method | Route | Description |
-|--------|-------|-------------|
-| POST | `/auth/webhook` | Clerk webhook — sync user to DB |
-
-### Family
-| Method | Route | Description |
-|--------|-------|-------------|
-| POST | `/families` | Create a new family |
-| POST | `/families/join` | Join via invite code |
-| GET | `/families/:id` | Get family details + members |
-| DELETE | `/families/:id/members/:userId` | Remove a member |
-
-### Events
-| Method | Route | Description |
-|--------|-------|-------------|
-| GET | `/events` | List family events (filterable by category, date) |
-| POST | `/events` | Create an event |
-| GET | `/events/:id` | Get event detail + attendees |
-| PATCH | `/events/:id` | Update event |
-| DELETE | `/events/:id` | Delete event |
-| POST | `/events/:id/rsvp` | Submit RSVP (going / maybe / skip) |
-
----
-
-## Auth Flow (Clerk)
-
-1. User signs in via Google OAuth or email magic link (Clerk)
-2. Clerk issues a JWT session token
-3. Mobile app attaches the token to every API request (`Authorization: Bearer <token>`)
-4. Express middleware verifies the token using the Clerk SDK
-5. Clerk webhook (`/auth/webhook`) fires on user creation → syncs user record to Neon
-6. New users are prompted to create a family or join one with an invite code
-
----
-
-## Navigation Structure (Expo Router)
-
-```
-/                        → redirect to (auth) or (tabs)
-(auth)/sign-in           → Onboarding / Auth screen
-(auth)/onboarding        → Carousel slides + family join
-(tabs)/                  → Home Dashboard
-(tabs)/calendar          → Family Calendar
-(tabs)/browse            → Browse / Categories
-(tabs)/profile           → Profile & Settings
-events/[id]              → Event Detail (modal or push)
-events/create            → Create Event Wizard (modal)
-family/                  → Family Group screen
-```
-
----
-
-## Module Responsibilities
-
-| Module | Mobile | API |
-|--------|--------|-----|
-| **auth** | Clerk provider, sign-in screen, onboarding | JWT middleware, Clerk webhook |
-| **home** | Dashboard feed, quick-add | Events list endpoint |
-| **calendar** | Month/Week/Agenda views | Events by date range |
-| **events** | Detail screen, Create wizard, RSVP | Events CRUD, RSVP endpoint |
-| **categories** | Browse screen, search | Events filter by category |
-| **family** | Members list, invite, code share | Family CRUD, member management |
-| **profile** | Settings, notification prefs, sign-out | User update |
-
----
-
-## Development Phases
-
-### Phase 1 — Foundation
-- Monorepo setup (pnpm workspaces)
-- Expo project with Expo Router
-- Express API with TypeScript
-- Neon DB + Drizzle schema + migrations
-- Clerk auth integration (mobile + API)
-
-### Phase 2 — Core Features
-- Family creation and invite code flow
-- Events CRUD (create, list, detail, delete)
-- RSVP system
-- Home dashboard + calendar views
-
-### Phase 3 — Polish
-- Browse / categories screen
-- Search functionality
-- Push notifications (Expo Notifications)
-- Profile & settings screen
-
-### Phase 4 — Extras (optional)
-- Event photo attachments
-- Comments / chat per event
-- AI-powered event suggestions
-- Recurring events support
+What part do you want to dive deeper into first — auth setup, real-time calendar sync, AI integration, or a sample project structure? Or any changes (e.g., add Kotlin instead of Java, prefer SSE over WebSocket)? Let's build on this!
