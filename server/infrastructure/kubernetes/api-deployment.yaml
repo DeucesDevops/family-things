@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: family-things-api
+  namespace: family-things
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: family-things-api
+  template:
+    metadata:
+      labels:
+        app: family-things-api
+    spec:
+      containers:
+        - name: api
+          image: ghcr.io/your-org/family-things-api:latest
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: family-things-api-secrets
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 30

@@ -1,0 +1,207 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum FamilyRole {
+  ADMIN
+  MEMBER
+  HELPER
+}
+
+enum EventType {
+  OUTING
+  REMINDER
+  HOLIDAY
+  WISH
+  MEAL
+  HEALTH
+}
+
+enum ReminderType {
+  BIRTHDAY
+  GROOMING
+  HEALTH
+  ERRAND
+  HOLIDAY
+  CUSTOM
+}
+
+enum SuggestionStatus {
+  OPEN
+  ACCEPTED
+  ARCHIVED
+}
+
+enum NotificationChannel {
+  IN_APP
+  EMAIL
+  PUSH
+}
+
+enum NotificationStatus {
+  QUEUED
+  SENT
+  FAILED
+}
+
+model User {
+  id                String         @id @default(uuid()) @db.Uuid
+  name              String
+  email             String         @unique
+  passwordHash      String         @map("password_hash")
+  createdAt         DateTime       @default(now()) @map("created_at")
+  updatedAt         DateTime       @updatedAt @map("updated_at")
+  familyMemberships FamilyMember[]
+  events            FamilyEvent[]
+  reminders         Reminder[]
+  votes             Vote[]
+  wishDrafts        WishDraft[]
+  refreshTokens     RefreshToken[]
+  notifications     Notification[]
+
+  @@map("app_users")
+}
+
+model RefreshToken {
+  id        String    @id @default(uuid()) @db.Uuid
+  tokenHash String    @unique @map("token_hash")
+  userId    String    @map("user_id") @db.Uuid
+  expiresAt DateTime  @map("expires_at")
+  revokedAt DateTime? @map("revoked_at")
+  createdAt DateTime  @default(now()) @map("created_at")
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("refresh_tokens")
+}
+
+model Family {
+  id            String         @id @default(uuid()) @db.Uuid
+  name          String
+  inviteCode    String         @unique @map("invite_code")
+  createdAt     DateTime       @default(now()) @map("created_at")
+  updatedAt     DateTime       @updatedAt @map("updated_at")
+  members       FamilyMember[]
+  events        FamilyEvent[]
+  reminders     Reminder[]
+  suggestions   Suggestion[]
+  wishDrafts    WishDraft[]
+  notifications Notification[]
+
+  @@map("families")
+}
+
+model FamilyMember {
+  id       String     @id @default(uuid()) @db.Uuid
+  familyId String     @map("family_id") @db.Uuid
+  userId   String     @map("user_id") @db.Uuid
+  role     FamilyRole @default(MEMBER)
+  joinedAt DateTime   @default(now()) @map("joined_at")
+  family   Family     @relation(fields: [familyId], references: [id], onDelete: Cascade)
+  user     User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([familyId, userId])
+  @@index([userId])
+  @@map("family_members")
+}
+
+model FamilyEvent {
+  id          String    @id @default(uuid()) @db.Uuid
+  familyId    String    @map("family_id") @db.Uuid
+  createdById String    @map("created_by_id") @db.Uuid
+  type        EventType @default(OUTING)
+  title       String
+  notes       String?   @db.VarChar(2000)
+  startsAt    DateTime  @map("starts_at")
+  endsAt      DateTime? @map("ends_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  family      Family    @relation(fields: [familyId], references: [id], onDelete: Cascade)
+  createdBy   User      @relation(fields: [createdById], references: [id], onDelete: Restrict)
+
+  @@index([familyId, startsAt])
+  @@map("family_events")
+}
+
+model Reminder {
+  id          String       @id @default(uuid()) @db.Uuid
+  familyId    String       @map("family_id") @db.Uuid
+  createdById String       @map("created_by_id") @db.Uuid
+  type        ReminderType @default(CUSTOM)
+  title       String
+  dueAt       DateTime     @map("due_at")
+  completed   Boolean      @default(false)
+  createdAt   DateTime     @default(now()) @map("created_at")
+  family      Family       @relation(fields: [familyId], references: [id], onDelete: Cascade)
+  createdBy   User         @relation(fields: [createdById], references: [id], onDelete: Restrict)
+
+  @@index([familyId, dueAt])
+  @@map("reminders")
+}
+
+model Suggestion {
+  id        String           @id @default(uuid()) @db.Uuid
+  familyId  String           @map("family_id") @db.Uuid
+  title     String
+  category  String
+  meta      String
+  rationale String?          @db.VarChar(2000)
+  status    SuggestionStatus @default(OPEN)
+  createdAt DateTime         @default(now()) @map("created_at")
+  family    Family           @relation(fields: [familyId], references: [id], onDelete: Cascade)
+  votes     Vote[]
+
+  @@index([familyId, createdAt])
+  @@map("suggestions")
+}
+
+model Vote {
+  id           String     @id @default(uuid()) @db.Uuid
+  suggestionId String     @map("suggestion_id") @db.Uuid
+  userId       String     @map("user_id") @db.Uuid
+  positive     Boolean    @default(true)
+  createdAt    DateTime   @default(now()) @map("created_at")
+  suggestion   Suggestion @relation(fields: [suggestionId], references: [id], onDelete: Cascade)
+  user         User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([suggestionId, userId])
+  @@index([userId])
+  @@map("votes")
+}
+
+model WishDraft {
+  id            String   @id @default(uuid()) @db.Uuid
+  familyId      String   @map("family_id") @db.Uuid
+  createdById   String   @map("created_by_id") @db.Uuid
+  recipientName String   @map("recipient_name")
+  message       String   @db.VarChar(2000)
+  occasion      String?
+  createdAt     DateTime @default(now()) @map("created_at")
+  family        Family   @relation(fields: [familyId], references: [id], onDelete: Cascade)
+  createdBy     User     @relation(fields: [createdById], references: [id], onDelete: Restrict)
+
+  @@index([familyId, createdAt])
+  @@map("wish_drafts")
+}
+
+model Notification {
+  id        String              @id @default(uuid()) @db.Uuid
+  familyId  String?             @map("family_id") @db.Uuid
+  userId    String?             @map("user_id") @db.Uuid
+  title     String
+  message   String              @db.VarChar(2000)
+  channel   NotificationChannel @default(IN_APP)
+  status    NotificationStatus  @default(QUEUED)
+  sentAt    DateTime?           @map("sent_at")
+  createdAt DateTime            @default(now()) @map("created_at")
+  family    Family?             @relation(fields: [familyId], references: [id], onDelete: Cascade)
+  user      User?               @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([familyId, createdAt])
+  @@index([userId, createdAt])
+  @@map("notifications")
+}
