@@ -18,17 +18,22 @@ Express.js + TypeScript backend for the Family Things mobile app.
 ## Local Setup
 
 ```bash
-cd server
-cp .env.example .env
-npm install
-npm run db:generate
-docker compose up -d postgres redis mailhog
-npm run db:push
-npm run db:seed
-npm run dev
+docker compose up --build
 ```
 
+That single command now:
+
+- builds the API image
+- starts PostgreSQL, Redis, MailHog, and the API
+- waits for PostgreSQL to become ready
+- runs `prisma db push`
+- seeds demo data idempotently
+
 The API runs at `http://localhost:8080/api`.
+
+Run it from the repository root. If you prefer working inside `server/`, `docker compose up --build` works there too.
+
+If you want to override any local defaults, create `server/.env` from [server/.env.example](/Users/bernardboateng/Desktop/Projects/mobile/family-things-mobile/server/.env.example) and Docker Compose will pick those values up automatically.
 
 ## MVP Endpoints
 
